@@ -1,3 +1,16 @@
-log/*.log
+# Rails directories
+log/[^.]*
+doc/[^.]*
 tmp/**/*
 config/database.yml
+db/*.sqlite3
+db/*.sql
+db/*.sql.gz
+
+# Development-related files
+.DS_Store
+*.tmproj
+*.swp
+
+# Ignore emacs backup files
+*~
