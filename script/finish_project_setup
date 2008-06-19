@@ -12,9 +12,4 @@ puts "** Adding submodules"
 puts `git submodule init`
 puts `git submodule update`
 
-puts "** Generating rspec configs"
-puts `./script/generate rspec`
-puts `git add script/spec spec`
-puts `git commit -m '* Generating configs for rspec'`
-
 puts "** Finished setting up project"
