@@ -2,16 +2,16 @@
 
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.."
 
-puts "* Copying database config from template"
-`cp #{RAILS_ROOT}/config/database.example.yml #{RAILS_ROOT}/config/database.yml`
+puts "** Copying database config from template"
+puts `cp #{RAILS_ROOT}/config/database.example.yml #{RAILS_ROOT}/config/database.yml`
 
-puts "* Adding submodules"
-`git submodule init`
-`git submodule update`
+puts "** Adding submodules"
+puts `git submodule init`
+puts `git submodule update`
 
-puts "* Generating rspec configs"
-`./script/generate rspec`
-`git add script/spec spec`
-`git commit -m '* Generating configs for rspec'`
+puts "** Generating rspec configs"
+puts `./script/generate rspec`
+puts `git add script/spec spec`
+puts `git commit -m '* Generating configs for rspec'`
 
 puts "** Finished setting up project"
