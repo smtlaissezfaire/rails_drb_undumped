@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 
+# NOTE: We cannot load the Rails environment because the empty /vendor/rails 
+# dir tricks Rails into thinking there is a Rails checkout there.
+
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.."
 
 puts "** Copying database config from template"
-puts `cp #{RAILS_ROOT}/config/database.example.yml #{RAILS_ROOT}/config/database.yml`
+execute `cp #{RAILS_ROOT}/config/database.example.yml #{RAILS_ROOT}/config/database.yml`
 
 puts "** Adding submodules"
 puts `git submodule init`
