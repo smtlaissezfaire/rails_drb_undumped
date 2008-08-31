@@ -17,5 +17,5 @@ def connection.select(sql, name = nil)
 end
 
 DRb.start_service here, connection
-DRb.thread.join
 puts '* Waiting for connections'
+DRb.thread.join
